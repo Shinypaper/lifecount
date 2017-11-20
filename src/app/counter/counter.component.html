@@ -1,0 +1,17 @@
+<div class="form">
+  <label for="date">Date of Birth</label>
+  <input [(ngModel)]="lifeLeft" id="date" type="date">
+  <div>
+    <span>Weeks of life lived</span>
+    <div class="block weeks-used"></div>
+  </div>
+  <div>
+    <span>Weeks of life left based on average life span</span>
+    <div class="block weeks-left"></div>
+  </div>
+</div>
+
+<div class="blocks">
+  <div *ngFor='let n of getLife().lifeUsed' class="block weeks-used"></div>
+  <div *ngFor='let n of getLife().deathArray' class="block weeks-left"></div>
+</div>
